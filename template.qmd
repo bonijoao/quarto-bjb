@@ -1,0 +1,126 @@
+---
+title: "Guidelines for writing a research paper for the Brazilian Journal of Biometrics"
+# Please add the ORCiD for all co-authors. You can register here: https://orcid.org/
+author:
+  - name: Paulo Canas Rodrigues
+    orcid: 0000-0000-0000-0000
+    email: paulocanas@gmail.com
+    corresponding: true
+    affiliations:
+      - department: Department of Statistics
+        name: Federal University of Bahia
+        city: Salvador
+        country: Brazil
+  - name: João Domingos Scalon
+    orcid: 0000-0000-0000-0000
+    affiliations:
+      - name: Federal University of Lavras
+        city: Lavras
+        country: Brazil
+  - name: Tales Jesus Fernandes
+    orcid: 0000-0000-0000-0000
+    affiliations:
+      - name: Federal University of Lavras
+        city: Lavras
+        country: Brazil
+abstract: |
+  The purpose of this template is to present the guidelines for writing a research paper for the *Brazilian Journal of Biometrics*. The abstract is composed by concise and affirmative sentences and should inform the article purposes; methodology; results and final considerations. The verbs should be in the third person singular form. The abstract should be between 150 to 250 words in length. In this link you can find some general guidelines on how to write an abstract for a scientific paper: <https://writing.wisc.edu/handbook/assignments/writing-an-abstract-for-your-research-paper/>.
+keywords:
+  - Statistics
+  - Data science
+  - Biometrics
+  - Capitalize the first word of each keyword
+# Fields filled in by the journal after acceptance
+doi: 10.28951/bjb.v99i9.999
+volume: 99
+year: 2026
+elocation: e-99999
+received: January 1, 2026
+revised: January 1, 2026
+accepted: January 1, 2026
+published: January 1, 2026
+bibliography: references.bib
+format:
+  bjb-pdf: default
+---
+
+# Introduction
+
+We strongly recommend the authors to use the templates provided, either the .docx or the .tex. No paper will be accepted in another template.
+
+Here you should write your introduction, including the literature review. In these guidelines we present an example for the structure of a research paper. However, the names of these sections can be changed by the authors. The Brazilian Journal of Biometrics publishes papers strongly connected with statistical, mathematical and data science methodology, with application to biological sciences.
+
+# Materials and Methods
+
+Here you should describe your data and the methodologies used in the analysis. The details should be enough for the results to be reproducible by the reader. You can include subsections and subsubsections.
+
+## Example of a Subsection
+
+This is an example of a Subsection.
+
+### Example of a Subsubsection
+
+This is an example of a Subsubsection.
+
+# Results and Discussion
+
+Here you should describe your results and their discussion. The discussion can be included as a separate section.
+
+## Equations
+
+Equation numbering, whenever necessary, must be sequential and in Arabic numbers aligned on the right. Its components must be in italics, except for numbers and functions.
+
+$$
+DIC = \hat{D} + 2p_{D}
+$$ {#eq-dic}
+
+## Figures and tables
+
+@fig-bjb shows the logo of the Brazilian Journal of Biometrics. All figures and tables should have detailed captions and labels to be cited in the text.
+
+![The caption of the figures should be given below the figures. The caption should be detailed enough for the figure to be understood.](figures/bjb_logo.png){#fig-bjb width=50%}
+
+@tbl-ex1 and @tbl-ex2 show examples of tables. The submissions to the Brazilian Journal of Biometrics should follow the format of these examples.
+
+| Var1  | Var2    | Var3  | Kg/day | Kg/day | Percent |
+|:------|--------:|------:|-------:|-------:|--------:|
+| 1     | 18,250  | 747   | 0.27   | 4,928  | 31      |
+| 2     | 9,500   | 38    | 0.29   | 2,755  | 17      |
+| 3     | 12,200  | 181   | 0.15   | 1,830  | 12      |
+| Total | 103,903 | 3,316 | 0.15   | 15,700 | 100     |
+
+: The caption of the tables should be given above. The caption should be detailed enough for the table to be understood. {#tbl-ex1}
+
+|   | Var1  | Var2  | Var3  | Var4  | Var5  |
+|:--|------:|------:|------:|------:|------:|
+| 1 | 2.36  | 1.08  | -0.49 | -0.82 | -0.65 |
+| 2 | -0.68 | -1.13 | -0.42 | -0.72 | 1.51  |
+| 3 | -1.00 | 0.02  | -0.54 | 0.31  | 1.28  |
+| 4 | -0.99 | -0.54 | 0.97  | -1.12 | 0.59  |
+| 5 | -2.35 | -0.29 | -0.53 | 0.30  | -0.30 |
+
+: Table titles should not be punctuated at the end of the text {#tbl-ex2}
+
+## References
+
+All references must be cited in the text using `[@key]` for inline references such as [@pereira2021naive], and using `@key` for text references such as @zhang2022zero or @pereira2021naive. When citing two or more references in the text you can use [@deng2021estimation; @huang2021causal].
+
+All references should be listed in alphabetical order of the first authors' surname. Examples of citations for books are: @bolle2013guide and @jain2007handbook.
+
+# Conclusions
+
+Here you should present the conclusions of your work and explain how the results will contribute to the field.
+
+## Acknowledgments {.unnumbered}
+
+Please add the acknowledgments to colleagues and funding agencies here.
+
+## Conflicts of Interest {.unnumbered}
+
+The authors declare no conflict of interest.
+
+## Author Contributions {.unnumbered}
+
+The authors must include the CRediT -- Contributor Role Taxonomy considering each author contribution for the paper, using the following roles (for more information, access <https://credit.niso.org/>):
+
+**Conceptualization**: XXXX, T.K.; YYYYYY, G. M. **Data curation**: **Formal analysis**: **Funding acquisition**: **Investigation**: **Methodology**: **Project administration**: **Software**: **Resources**: **Supervision**: **Validation**: **Visualization**: **Writing -- original draft**: **Writing -- review and editing**:

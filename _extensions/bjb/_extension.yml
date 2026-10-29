@@ -1,0 +1,26 @@
+title: Brazilian Journal of Biometrics
+author: João Paulo Bonifácio
+version: 0.1.0
+quarto-required: ">=1.4.0"
+contributes:
+  formats:
+    pdf:
+      documentclass: BJB
+      pdf-engine: pdflatex
+      cite-method: biblatex
+      number-sections: true
+      indent: true
+      fontfamily: fbb
+      fontfamilyoptions:
+        - scaled=0.97
+      fig-pos: "hbt!"
+      tbl-cap-location: top
+      fig-cap-location: bottom
+      link-citations: true
+      format-resources:
+        - BJB.cls
+        - bjb_logo.png
+      template-partials:
+        - partials/doc-class.tex
+        - partials/title.tex
+        - partials/before-body.tex

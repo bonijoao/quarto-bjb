@@ -1,0 +1,9 @@
+\documentclass[
+  journal=bjb,
+  manuscript=$if(manuscript)$$manuscript$$else$article$endif$,
+  year=$if(year)$$year$$else$xxxx$endif$,
+  volume=$if(volume)$$volume$$else$x$endif$,
+$for(classoption)$
+  $classoption$,
+$endfor$
+]{BJB}

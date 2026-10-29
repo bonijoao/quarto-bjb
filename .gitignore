@@ -1,0 +1,18 @@
+# Saídas de renderização
+*.pdf
+*.tex
+!_extensions/**/*.tex
+*.log
+*_files/
+.quarto/
+
+# Cópias feitas pelo format-resources na hora do render
+/BJB.cls
+/bjb_logo.png
+
+# Template original da revista
+TemplateBJB.zip
+*-blx.bib
+*.bbl
+*.bcf
+*.run.xml

@@ -1,0 +1,33 @@
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
+
+\title$if(shorttitle)$[$shorttitle$]$endif${$title$}
+
+$for(by-author)$
+\author{$if(it.orcid)$\orcid{$it.orcid$}$endif$$it.name.literal$}
+$for(it.affiliations/first)$
+\affiliation{$if(it.department)$$it.department$, $endif$$it.name$$if(it.city)$, $it.city$$endif$$if(it.region)$, $it.region$$endif$$if(it.country)$, $it.country$$endif$}
+$endfor$
+$for(it.affiliations/rest)$
+\alsoaffiliation{$if(it.department)$$it.department$, $endif$$it.name$$if(it.city)$, $it.city$$endif$$if(it.region)$, $it.region$$endif$$if(it.country)$, $it.country$$endif$}
+$endfor$
+$if(it.attributes.corresponding)$
+\email{$it.email$}
+$endif$
+
+$endfor$
+\doi{$if(doi)$$doi$$else$10.28951/bjb.vXiX.XXX$endif$}
+
+\received{$if(received)$$received$$else$---$endif$}
+\revised{$if(revised)$$revised$$else$---$endif$}
+\accepted{$if(accepted)$$accepted$$else$---$endif$}
+\published{$if(published)$$published$$else$---$endif$}
+
+% Cabeçalho e rodapé
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyhf{}
+\fancyfoot[LE,RO]{\thepage}
+\fancyhead[LO,RE]{$if(running-author)$$running-author$$else$$for(by-author/first)$$it.name.family$$endfor$$if(by-author/rest)$ {\it et al.}$endif$$endif$}
+\fancyfoot[LO,RE]{{\it Braz. J. Biom.}, v.{\bf $if(volume)$$volume$$else$x$endif$}, $if(elocation)$$elocation$$else$e-xxxxx$endif$, $if(year)$$year$$else$xxxx$endif$.}

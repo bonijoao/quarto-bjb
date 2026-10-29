@@ -1,0 +1,11 @@
+$-- O \maketitle é chamado automaticamente pela classe BJB no \begin{document}
+$if(abstract)$
+\begin{abstract}
+$abstract$
+
+$if(keywords)$
+\noindent \textbf{Keywords}: $for(keywords)$$keywords$$sep$; $endfor$
+$endif$
+\end{abstract}
+\vspace{-0.5cm}
+$endif$
