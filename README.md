@@ -1,67 +1,68 @@
-# Brazilian Journal of Biometrics — formato Quarto
+# Brazilian Journal of Biometrics — Quarto format
 
-Extensão Quarto para escrever artigos no formato do
-[Brazilian Journal of Biometrics](https://biometria.ufla.br/) (BJB). Gera o PDF
-com a classe LaTeX oficial da revista (`BJB.cls`): cabeçalho com o logo,
-autores com ORCID, caixa de resumo, datas de submissão, cabeçalho/rodapé e
-referências no estilo da revista.
+**English** | [Português](README.pt-BR.md)
 
-## Criar um artigo novo
+A Quarto extension for writing papers in the format of the
+[Brazilian Journal of Biometrics](https://biometria.ufla.br/) (BJB). It builds
+the PDF with the journal's official LaTeX class (`BJB.cls`): header with the
+journal logo, authors with ORCID, abstract box, submission dates, running
+header/footer and references in the journal style.
+
+## Start a new paper
 
 ```bash
 quarto use template bonijoao/quarto-bjb
 ```
 
-O comando pede o nome de uma pasta e cria nela o `.qmd` de exemplo, o
-`references.bib` e a extensão. Para renderizar:
+The command asks for a folder name and creates the example `.qmd`, the
+`references.bib` and the extension in it. To render:
 
 ```bash
-quarto render artigo.qmd
+quarto render paper.qmd
 ```
 
-## Usar num documento que já existe
+## Use with an existing document
 
 ```bash
 quarto add bonijoao/quarto-bjb
 ```
 
-e no YAML:
+and in the YAML header:
 
 ```yaml
 format:
   bjb-pdf: default
 ```
 
-## Campos do YAML
+## YAML fields
 
-| Campo | Uso |
+| Field | Use |
 |---|---|
-| `title`, `shorttitle` | Título (o curto é opcional) |
+| `title`, `shorttitle` | Title (the short one is optional) |
 | `author` | `name`, `orcid`, `email`, `corresponding: true`, `affiliations` (`department`, `name`, `city`, `region`, `country`) |
-| `abstract`, `keywords` | Resumo e palavras-chave (dentro da caixa do resumo) |
-| `bibliography` | Arquivo `.bib`; citações com `[@chave]` e `@chave` |
-| `manuscript` | Tipo exibido acima do título (padrão `article`) |
-| `running-author` | Texto do cabeçalho; padrão: sobrenome do 1º autor + *et al.* |
-| `doi`, `volume`, `year`, `elocation` | Preenchidos pela revista |
-| `received`, `revised`, `accepted`, `published` | Datas; preenchidas pela revista |
+| `abstract`, `keywords` | Abstract and keywords (inside the abstract box) |
+| `bibliography` | `.bib` file; cite with `[@key]` and `@key` |
+| `manuscript` | Type shown above the title (default `article`) |
+| `running-author` | Running header text; default: first author's surname + *et al.* |
+| `doi`, `volume`, `year`, `elocation` | Filled in by the journal |
+| `received`, `revised`, `accepted`, `published` | Dates; filled in by the journal |
 
-Seções sem número (Agradecimentos, Conflito de interesses, Contribuições)
-usam `{.unnumbered}`.
+Unnumbered sections (Acknowledgments, Conflicts of Interest, Author
+Contributions) use `{.unnumbered}`.
 
-## Requisitos
+## Requirements
 
-Uma distribuição LaTeX com `pdflatex` e `biber` (TinyTeX ou MiKTeX). Pacotes
-usados pela classe: `fbb`, `sourcesanspro`, `mathastext`, `sansmath`,
-`biblatex-nature`, `floatrow`, `mdframed`, `textpos`, `stringstrings`, entre
-outros. O TinyTeX instala o que faltar sozinho.
+A LaTeX distribution with `pdflatex` and `biber` (TinyTeX or MiKTeX). Packages
+used by the class include `fbb`, `sourcesanspro`, `mathastext`, `sansmath`,
+`biblatex-nature`, `floatrow`, `mdframed`, `textpos` and `stringstrings`.
+TinyTeX installs missing packages automatically.
 
-No MiKTeX, se aparecer `auto expansion is only possible with scalable fonts`,
-o mapa da fonte Source Sans não está ativo: acrescente
-`Map SourceSansThree.map` ao `updmap.cfg` da instalação e rode
-`miktex fontmaps configure`.
+On MiKTeX, if you get `auto expansion is only possible with scalable fonts`,
+the Source Sans font map is not enabled: add `Map SourceSansThree.map` to the
+installation's `updmap.cfg` and run `miktex fontmaps configure`.
 
-## Diferença em relação ao template LaTeX oficial
+## Differences from the official LaTeX template
 
-A única alteração na `BJB.cls` é `backend=biber` no lugar de `backend=bibtex`
-no `biblatex`, porque o Quarto roda o `biber` com `cite-method: biblatex`. O
-estilo das referências (`nature`, citações autor-ano) é o mesmo.
+The only change to `BJB.cls` is `backend=biber` instead of `backend=bibtex` in
+`biblatex`, because Quarto runs `biber` with `cite-method: biblatex`. The
+reference style (`nature`, author-year citations) is unchanged.
