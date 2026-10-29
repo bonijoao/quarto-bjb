@@ -9,7 +9,7 @@ referências no estilo da revista.
 ## Criar um artigo novo
 
 ```bash
-quarto use template bonijoao/bjbqmd
+quarto use template bonijoao/quarto-bjb
 ```
 
 O comando pede o nome de uma pasta e cria nela o `.qmd` de exemplo, o
@@ -22,7 +22,7 @@ quarto render artigo.qmd
 ## Usar num documento que já existe
 
 ```bash
-quarto add bonijoao/bjbqmd
+quarto add bonijoao/quarto-bjb
 ```
 
 e no YAML:
