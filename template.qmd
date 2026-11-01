@@ -1,35 +1,27 @@
 ---
-title: "Guidelines for writing a research paper for the Brazilian Journal of Biometrics"
+title: "Title of your paper"
 # Please add the ORCiD for all co-authors. You can register here: https://orcid.org/
 author:
-  - name: Paulo Canas Rodrigues
+  - name: First Author
     orcid: 0000-0000-0000-0000
-    email: paulocanas@gmail.com
+    email: first.author@example.com
     corresponding: true
     affiliations:
-      - department: Department of Statistics
-        name: Federal University of Bahia
-        city: Salvador
-        country: Brazil
-  - name: João Domingos Scalon
+      - department: Department
+        name: University
+        city: City
+        country: Country
+  - name: Second Author
     orcid: 0000-0000-0000-0000
     affiliations:
-      - name: Federal University of Lavras
-        city: Lavras
-        country: Brazil
-  - name: Tales Jesus Fernandes
-    orcid: 0000-0000-0000-0000
-    affiliations:
-      - name: Federal University of Lavras
-        city: Lavras
-        country: Brazil
+      - name: University
+        city: City
+        country: Country
 abstract: |
-  The purpose of this template is to present the guidelines for writing a research paper for the *Brazilian Journal of Biometrics*. The abstract is composed by concise and affirmative sentences and should inform the article purposes; methodology; results and final considerations. The verbs should be in the third person singular form. The abstract should be between 150 to 250 words in length. In this link you can find some general guidelines on how to write an abstract for a scientific paper: <https://writing.wisc.edu/handbook/assignments/writing-an-abstract-for-your-research-paper/>.
+  Write your abstract here (150 to 250 words).
 keywords:
-  - Statistics
-  - Data science
-  - Biometrics
-  - Capitalize the first word of each keyword
+  - First keyword
+  - Second keyword
 # Fields filled in by the journal after acceptance
 doi: 10.28951/bjb.v99i9.999
 volume: 99
