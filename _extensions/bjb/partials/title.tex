@@ -1,6 +1,18 @@
 \usepackage{indentfirst}
 \usepackage{fancyhdr}
 
+% Tabelas como no template da revista: legenda alinhada à esquerda e fios finos.
+% Os fios do booktabs valem para as tabelas que o Pandoc gera (pipe tables, kable).
+\captionsetup[table]{justification=justified,singlelinecheck=off}
+\setlength{\heavyrulewidth}{0.4pt}
+\setlength{\lightrulewidth}{0.4pt}
+\setlength{\abovetopsep}{0pt}
+\setlength{\belowbottomsep}{0pt}
+\setlength{\aboverulesep}{0pt}
+\setlength{\belowrulesep}{0pt}
+% A classe só define esta altura de linha dentro de table; o Pandoc usa longtable.
+\AtBeginEnvironment{longtable}{\setlength{\extrarowheight}{.75ex}}
+
 \title$if(shorttitle)$[$shorttitle$]$endif${$title$}
 
 $for(by-author)$
